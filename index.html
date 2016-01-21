@@ -20,19 +20,19 @@
 		<script>
 
 	function initMap() {
-		var myLatLng = {lat: 0, lng: 0};
 
 		var map = new google.maps.Map(document.getElementById('map'), {
 			zoom: 10,
-			center: myLatLng
+			center: {lat: 0, lng: 0}
 		});
 
 		var marker = new google.maps.Marker({
-			position: myLatLng,
+			position: {lat: 0, lng: 0},
 			map: map,
 			title: 'Hello World!'
 		});
 	
+		var infoWindow = new google.maps.InfoWindow({map: map});
 	
 		// Try HTML5 geolocation.
 		if (navigator.geolocation) {
