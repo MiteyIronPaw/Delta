@@ -20,10 +20,25 @@
 		<script>
 
 	function initMap() {
+	
+		var map_theme = [
+		  {
+			"elementType": "labels",
+			"stylers": [
+			  { "visibility": "off" }
+			]
+		  },{
+			"stylers": [
+			  { "hue": "#ff6e00" }
+			]
+		  }
+		];
 
 		var map = new google.maps.Map(document.getElementById('map'), {
-			zoom: 10,
-			center: {lat: 0, lng: 0}
+			zoom: 18,
+			center: {lat: -43.531, lng: 172.64},
+			disableDefaultUI: true,
+			styles: map_theme
 		});
 
 		var marker = new google.maps.Marker({
@@ -62,6 +77,6 @@
 	}
 
 		</script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 	</body>
 </html>
